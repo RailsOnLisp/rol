@@ -1,0 +1,4 @@
+#!/bin/sh
+ACTION="$1"
+shift
+exec "$(dirname "$0")/rol-$ACTION" "$@"
