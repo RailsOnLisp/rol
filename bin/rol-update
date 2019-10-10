@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+cd ../..
+ROL_DIR="$PWD"
+
+pull() {
+    for DIR; do
+        cd "$ROL_DIR/$DIR" && git pull
+    done
+}
+
+pull rol-assets rol-files rol-log rol-server rol-template rol-uri rol
